@@ -33,12 +33,17 @@ end
 group :development, :test do
   gem 'dotenv-rails'
   gem 'byebug'
-  gem 'minitest-rails'
-  gem 'minitest-rails-capybara'
-  gem 'minitest-reporters'
   gem 'rubocop'
   gem 'launchy'
   gem 'faker'
+end
+
+group :test do
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+  gem 'minitest-matchers'
+  gem 'email_spec'
 end
 
 group :development do
