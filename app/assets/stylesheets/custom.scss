@@ -1,15 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Passion+One);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
 
+$main-font: 'Inconsolata', 'Roboto';
 $action-orange: #ff4a00;
 $write-bg: #e8f1f2;
 $accent1: #099ac8;
 $bg-grey: #bbb;
-$bg-header: #000;
+$bg-header: #333;
+$border-radius: 5px;
 
 html, body {
-  background: #fff !important;
-  border-radius: 5px;
+  background: $bg-grey !important;
+}
+
+button {
+  background: $action-orange !important;
 }
 
 
@@ -37,28 +43,43 @@ html, body {
 /* navbar styles */
 
 nav {
-  padding-top: 10px;
-  height: 65px !important;
+  // border-radius: 5pxs;
+  font-family: $main-font !important;
+  vertical-align: middle;
+  padding-top: 3px;
+  height: 49px !important;
   background: $bg-header !important;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.33);
   -moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.33);
   box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.33);
   li a {
-    color: $action-orange !important;
+    color: $accent1 !important;
     font-weight: bold !important;
-    font-size: 15px !important;
+    font-size: 1.3em;
     background: $bg-header !important;
+    &:hover {
+      color: $action-orange !important;
+    }
+  }
+  .name h2{
+
+    color: $action-orange !important;
   }
   .has-form {
-    background: $bg-grey !important;
+    border-radius: $border-radius;
+    background: $bg-header !important;
   }
   .divider {
     opacity: 0.15;
   }
   .search {
-    background: $bg-grey;
+    background: $accent1;
+    border-radius: $border-radius;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     &:hover {
-      background: #EEE;
+      background: $bg-grey + #FFF;
+      color: $accent1;
     }
   }
 }
@@ -70,14 +91,20 @@ nav {
   z-index: 200;
   h1 {
     a {
-      font-family: 'Passion One', cursive !important;
+      font-family: $main-font, cursive !important;
       font-size: 2rem !important;
       font-weight: normal !important;
       color: #7C8D9B!important;
       &:hover {
+        color: $accent1;
         opacity: 0.75;
+        // border-radius: $border-radius;
+        // border: 2px $accent1 solid;
       }
     }
+  }
+  .left {
+    background: $bg-header !important;
   }
 }
 
@@ -95,7 +122,7 @@ nav {
   -o-background-size: cover;
   background-size: cover;
   h1 {
-    font-family: 'Passion One', cursive;
+    font-family: $main-font, 'Passion one';
     position: absolute;
     top: 125px;
     left:0;
@@ -107,13 +134,14 @@ nav {
     font-size: 4rem;
     p {
       font-size: 20px;
-      font-family: 'Roboto', sans-serif !important;
+      font-family: $main-font, 'Roboto', sans-serif !important;
     }
   }
   .sign-up-btn {
-    font-family: 'Passion One', cursive;
+    font-family: $main-font, 'Passion One', cursive;
     position: absolute;
-    background: #D6FDB2;
+    background: $action-orange !important;
+    border-radius: $border-radius;
     left:0;
     right:0;
     margin-left:auto;
@@ -122,12 +150,14 @@ nav {
     width: 225px;
     padding: 10px;
     z-index: 50;
+    color: #000;
     &:hover {
+      color: #FFF;
       background: #A7D9C3;
     }
   }
   .welcome {
-    font-family: 'Passion One', cursive;
+    font-family: $main-font, 'Passion One', cursive;
     position: absolute;
     font-size: 2rem;
     left:0;
@@ -169,14 +199,14 @@ nav {
 
 /* row CSS for Deal boxes on index page. */
 .deal-boxes {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: $main-font, sans-serif !important;
   h4 {
-    font-family: 'Passion One', cursive;
+    font-family: $main-font, 'Passion One', cursive;
     margin-bottom: 10px;
     color: #434335;
   }
   h5 {
-    font-family: 'Passion One', cursive;
+    font-family: $main-font, 'Passion One', cursive;
   }
   .sub-title {
     font-size: 30px;
@@ -185,6 +215,8 @@ nav {
 
 /* Deal boxes on index page have max height */
 .boxes {
+  border-radius: $border-radius;
+  background: $write-bg !important;
   min-height: 410px;
   max-height: 410px;
   max-width: 320px;
@@ -204,12 +236,12 @@ nav {
 
 /* Row of closed deals on front page */
 .closed-boxes {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: $main-font, 'Roboto', sans-serif !important;
   clear: both;
   position: relative;
   top: 40px;
   h5 {
-    font-family: 'Passion One', cursive;
+    font-family: $main-font, 'Passion One', cursive;
   }
 }
 .ed-button {
@@ -219,13 +251,15 @@ nav {
 
 /* footer styles */
 footer {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: $main-font, 'Roboto', sans-serif !important;
+  color: #fff;
   font-size: 15px;
   font-weight: bold;
   margin-top: 100px;
   height: 200px !important;
   width: 100%;
-  background: #94A9BB;
+  background: $bg-header;
   padding-top: 75px;
+  padding-bottom: 100px;
   text-align: center;
 }
