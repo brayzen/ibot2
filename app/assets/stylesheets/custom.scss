@@ -1,8 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Passion+One);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+$action-orange: #ff4a00;
+$write-bg: #e8f1f2;
+$accent1: #099ac8;
+$bg-grey: #bbb;
+$bg-header: #000;
+
 html, body {
   background: #fff !important;
+  border-radius: 5px;
 }
 
 
@@ -24,7 +31,7 @@ html, body {
 }
 
 .error {
-  background: #FF6B35 !important;
+  background: #F56 !important;
 }
 
 /* navbar styles */
@@ -32,26 +39,26 @@ html, body {
 nav {
   padding-top: 10px;
   height: 65px !important;
-  background: #fff !important;
+  background: $bg-header !important;
   -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.33);
   -moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.33);
   box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.33);
   li a {
-    color: #707070 !important;
+    color: $action-orange !important;
     font-weight: bold !important;
     font-size: 15px !important;
-    background: #fff !important;
+    background: $bg-header !important;
   }
   .has-form {
-    background: #fff !important;
+    background: $bg-grey !important;
   }
   .divider {
     opacity: 0.15;
   }
   .search {
-    background: #7C8D9B;
+    background: $bg-grey;
     &:hover {
-      background: #94A9BB;
+      background: #EEE;
     }
   }
 }
