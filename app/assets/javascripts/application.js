@@ -17,6 +17,7 @@
 //= require social-share-button
 //= require d3
 //= require jquery.turbolinks
+//= require googAnal
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
