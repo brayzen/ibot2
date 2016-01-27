@@ -4,11 +4,13 @@
 
 $main-font: 'Inconsolata', 'Roboto';
 $action-orange: #ff4a00;
-$write-bg: #e8f1f2;
+$write-bg: #FCFCFC;
 $accent1: #099ac8;
+$accent2: lime;
 $bg-grey: #bbb;
 $bg-header: #333;
 $border-radius: 5px;
+$billboard-overlay: $action-orange;
 
 html, body {
   background: $bg-grey !important;
@@ -28,16 +30,18 @@ button {
   text-align: center;
   border: none !important;
   font-weight: bold !important;
-  color: #575743 !important;
+  background: $bg-grey !important;
   z-index: 75;
 }
 
 .notice {
-  background: #D4FFAD!important;
+  background: $accent2 !important;
+  opacity: 1;
 }
 
 .error {
-  background: #F56 !important;
+  background: $action-orange !important;
+  opacity: .8;
 }
 
 /* navbar styles */
@@ -114,9 +118,11 @@ nav {
   text-align: center;
   margin-top: -20px;
   margin-bottom: 25px;
+  border-left: 2px solid $accent2;
+  border-right: 2px solid $accent2;
   width: 100%;
   height: 450px;
-  background: image-url("deal.jpg") no-repeat center center fixed;
+  background: image-url("robotandbird.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -125,6 +131,19 @@ nav {
     font-family: $main-font, 'Passion one';
     position: absolute;
     top: 125px;
+    @media (min-width:400px) and (max-width:799px){
+      top: 75px;
+      font-size: 3rem;
+    }
+    @media (min-width: 800px) and (max-width: 999px){
+      top: 90px;
+      font-size: 4rem;
+      margin: auto;
+    }
+    @media (min-width: 1000px){
+      font-size: 5rem;
+      margin: auto;
+    }
     left:0;
     right:0;
     margin-left:auto;
@@ -135,12 +154,17 @@ nav {
     p {
       font-size: 20px;
       font-family: $main-font, 'Roboto', sans-serif !important;
+      line-height: 1.3em;
+      padding: 5%;
+      @media (min-width: 1000px){
+        padding: 0;
+      }
     }
   }
   .sign-up-btn {
     font-family: $main-font, 'Passion One', cursive;
     position: absolute;
-    background: $action-orange !important;
+    background: $accent2 !important;
     border-radius: $border-radius;
     left:0;
     right:0;
@@ -151,6 +175,12 @@ nav {
     padding: 10px;
     z-index: 50;
     color: #000;
+    @media (max-width: 740px){
+      top: 360px;
+    }
+    @media (min-width: 741px){
+      top: 311px;
+    }
     &:hover {
       color: #FFF;
       background: #A7D9C3;
@@ -166,14 +196,20 @@ nav {
     margin-left:auto;
     margin-right:auto;
     top: 255px;
+    @media (min-width:400px) and (max-width:799px){
+      top: 300px;
+    }
+    @media (min-width: 800px){
+      top: 350px;
+    }
     padding: 10px;
     z-index: 50;
   }
   .text-container {
     height: 450px;
     width: 100%;
-    background: #94A9BB;
-    opacity: 0.9;
+    background: $billboard-overlay;
+    opacity: 0.6;
   }
 }
 
