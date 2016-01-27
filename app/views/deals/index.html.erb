@@ -6,7 +6,7 @@
       <p>Real Power comes from the alignment of people with a common goal. Let IgniteBot do the heavy lifting!</p>
     </h1>
     <% if !user_signed_in? %>
-      <%= link_to "Sign Up for Free!", new_user_registration_path, class: "button large sign-up-btn" %>
+      <%= link_to "Sign Up, it's free", new_user_registration_path, class: "button large sign-up-btn" %>
     <% else %>
       <p class="welcome">Welcome back, <%= current_user.name %>!</p>
     <% end %>
