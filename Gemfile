@@ -24,6 +24,7 @@ gem 'omniauth-twitter'
 # gem 'omniauth-linkedin'
 gem 'gravtastic'
 gem 'foundation-rails'
+gem 'faker'
 
 group :production do
   gem 'pg'
@@ -35,7 +36,6 @@ group :development, :test do
   gem 'byebug'
   gem 'rubocop'
   gem 'launchy'
-  gem 'faker'
 end
 
 group :test do
