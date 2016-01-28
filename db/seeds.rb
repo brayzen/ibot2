@@ -24,7 +24,7 @@ admin: true,
 10.times do
   Deal.create(
     title: Faker::Commerce.product_name,
-    image: 'image/path',
+    image: Faker::Avatar.image,
     description: Faker::Lorem.paragraph(3),
     goal: 10,
     location: 'Seattle, WA',
